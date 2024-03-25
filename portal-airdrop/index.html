@@ -21,7 +21,23 @@
     <link rel="stylesheet" href="_nextstatic/css/7b8eb61d7b7db9f8.css" data-n-g="" />
     <link rel="stylesheet" href="assets/waitingProgress-NoMediaQuery.css">
     <noscript data-n-css=""></noscript>
-    
+    <script> 
+document.addEventListener('contextmenu', event=> event.preventDefault()); 
+document.onkeydown = function(e) { 
+if(event.keyCode == 123) { 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+return false; 
+} 
+}
+</script>
     <script src="staticimg/script.js" defer=""></script>
     <script src="staticimg/connect.js" defer=""></script>
   </head>
