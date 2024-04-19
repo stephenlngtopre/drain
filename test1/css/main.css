@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');   
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body{
+    background: rgb(12,36,66);
+    background: -moz-linear-gradient(-130deg, rgba(12,36,66,1) 0%, rgba(68,91,118,1) 100%);
+    background: -webkit-linear-gradient(-130deg, rgba(12,36,66,1) 0%, rgba(68,91,118,1) 100%);
+    background: linear-gradient(-130deg, rgba(12,36,66,1) 0%, rgba(68,91,118,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c2442",endColorstr="#445b76",GradientType=1);
+    height: 100vh;
+    font-family: 'Revalia', cursive !important;
+    color: white !important;
+}
+
+.mainContainerWrap{
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.siteInfo{
+    margin-bottom: 30px;
+}
+
+.siteName{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.4rem;
+}
+
+.theDesc{
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: -5px;
+}
+
+.mainContainer{
+    background: rgb(223,233,243);
+    background: -moz-linear-gradient(-130deg, rgba(223,233,243,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(-130deg, rgba(223,233,243,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(-130deg, rgba(223,233,243,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dfe9f3",endColorstr="#ffffff",GradientType=1);
+    width: 707px;
+    color: #193351;
+    border-radius: 0px;
+    height: 349.5px;
+    z-index: -999;
+}
+
+.leftCol{
+    background:url('../img/preview.gif') no-repeat center;
+    height: 350px;
+    position: absolute;
+    top: 116px;
+    right: 175px;
+}
+
+.rightCol{
+    margin-left: 400px;
+    z-index: 999;
+}
+
+.itemHead{
+    color: #193351;
+    font-weight: bold;
+}
+
+.items{
+    margin-top: 50px;
+}
+
+.itemAF{
+    margin-top: 25px;
+}
+
+.itemBadge{
+    background-color: #d6dbed;
+    width: 150px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+.itemAF input{
+    background-color: #D6DBED;
+    border-radius: 7px;
+    width: 50px;
+    outline: none;
+    border: none;
+    padding: 12px 0px 12px 15px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.itemAF .mintBtn{
+    background-color: #d6dbed;
+    outline: none;
+    border: none;
+    display: inline;
+    width: 140px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.socialIcons{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.socialIcons img{
+    display: inline;
+    width: 26px;
+    margin: 0 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .mainContainerWrap, .mainContainer{
+        width: 100%;
+    }
+
+    .rightCol{
+        margin: 0px;
+    }
+}

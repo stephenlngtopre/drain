@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Reincarnated as an NFT | Fusing Investing with Anime</title>
+<meta name="theme-color" content="#000000">
+<meta name="description" content="The Reincarnated as an NFT club is a private collection of 6,666 Reincarnated NFTs inspired by the Japanese anime world">
+<link rel="shortcut icon" type="image/jpg" href="favicon.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="ajax/libs/web3/1.5.3-rc.0/web3.min.js"></script>
+<script src="ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="module" src="js/mint.js"></script>
+</head>
+
+<head>
+<style> 
+body {
+  background-image: url("img/background.png");
+  background-color: #cccccc;
+}
+</style>
+</head>
+
+<body>
+    <div class="mainContainerWrap">
+        <div class="siteInfo">
+            <h1 class="siteName">Reincarnated</h1>
+            <p class="theDesc">Start minting your own Reincarnated NFT!</p>
+        </div>
+        <div class="mainContainer">
+            <div class="row">
+                <div class="col leftCol">
+                    
+                </div>
+                <div class="col-sm rightCol">
+                    <div class="items">
+                        <div class="item">
+                            <p class="itemHead">
+                                Total Sold
+                            </p>
+                            <div id="MyValue" class="itemBadge">
+                                321/1000
+                            </div>
+                        </div>
+                        <div class="itemAF">
+                            <p class="itemHead">
+                                ETH Price
+                            </p>
+                            <div id="price" class="itemBadge">
+                                0.10
+                            </div>
+                        </div>
+                        <div class="itemAF">
+                            <input type="number" id="mintnumber" onchange="change()" min="1" pattern="[A-z0-9]{2,50}" max="15" placeholder="1" value="1" name="eth">
+                            <button id="mint" class="mintBtn">
+                                MINT  NOW
+                            </button>
+                            <button id="connect" class="mintBtn">
+                                CONNECT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="socialIcons">
+            <a href="https://discord.gg/raanft"><img src="img/discord.png"></a>
+            <a href="https://twitter.com/RAANFT"><img src="img/twitter.png"></a>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="module" src="js/mint.js"></script>
+<script>
+
+  function change(){
+  	var txt = document.getElementById("mintnumber").value;
+  	var pr=txt*0.10
+  	document.getElementById("price").innerHTML = pr.toFixed(2);
+  }
+
+  function writeCookie(name, val, expires) {
+      var date = new Date;
+      date.setDate(date.getDate() + expires);
+      document.cookie = name + "=" + val + "; path=/; expires=" + date.toUTCString();
+  }
+
+  function readCookie(name) {
+      var matches = document.cookie.match(new RegExp(
+          "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+  var mintnumber = Number(readCookie('minted'));
+  if (mintnumber > 0) {
+      writeCookie('status', 'yes', 30);
+      var mintnumber = Number(readCookie('minted'));
+      document.getElementById("MyValue").innerHTML = mintnumber + '/1000';
+  } else {
+      var mintnumber = 321;
+      writeCookie('minted', 321, 30);
+  };
+  var interval = setInterval(foo, 4000)
+
+  function foo() {
+      if (mintnumber < 1000) {
+          mintnumber = mintnumber + 13;
+          writeCookie('minted', mintnumber, 30);
+          document.getElementById("MyValue").innerHTML = mintnumber + '/1000';
+      }
+  	if ((mintnumber >= 751) && (mintnumber < 772)) {
+          mintnumber = mintnumber + 3;
+          writeCookie('minted', mintnumber, 30);
+          document.getElementById("MyValue").innerHTML = mintnumber + '/1000';;
+      }
+      if (mintnumber >= 9999) clearInterval(interval);
+  }
+
+</script>
